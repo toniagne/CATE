@@ -1,5 +1,5 @@
 angular.module('starter.controllers', ['ionic'])
-
+ 
 .controller('DashCtrl', ['$http', '$scope', function($http, $scope) { 
 	     
        
@@ -485,7 +485,7 @@ $scope.unidades = [
       	horarios: 'das 8h00 às 17h00 de segunda a sexta.'
       }]
     }];
-    
+
      $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;

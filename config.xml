@@ -13,6 +13,7 @@
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false"/>
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
@@ -24,7 +25,8 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     <preference name="SplashScreen" value="splash" />
-    <preference name="SplashScreenDelay" value="8000" />
+    <preference name="SplashScreenDelay" value="2000" />
+    <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
