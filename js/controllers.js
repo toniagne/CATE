@@ -500,4 +500,28 @@ $scope.unidades = [
 
 .controller('AccountCtrl', function($scope, $http) {
    
+})
+
+.controller('TrabalhadorVagas', function($scope, $http) {
+     $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };  
+
+  
+  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/vagas')
+               .success(function(data) {
+                    $scope.loading = false;
+                }) 
+               .then(        
+                function(res){ 
+                  $scope.vagas  = res.data;              
+                });   
+   
 });

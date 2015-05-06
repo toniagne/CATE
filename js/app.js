@@ -65,8 +65,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
 
-
- 
+ .state('tab.trabalhador', {
+      url: '/trabalhador',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+ .state('tab.trabalhador-oportunidades', {
+      url: '/trabalhador/oportunidades',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-oportunidades.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+  .state('tab.trabalhador-vagas', {
+      url: '/trabalhador/vagas/:tipoVaga',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-vagas.html',
+          controller: 'TrabalhadorVagas'
+        }
+      }
+    })
 
 
   .state('tab.chats', {
