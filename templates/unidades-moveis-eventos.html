@@ -1,0 +1,29 @@
+
+<ion-view view-title="" >
+  <ion-content  style='background-image: url("img/fundo.jpg"); width:100%; height: 100%; background-size: 100% 100%;'>
+    <center><img src="img/topo_unimoveis.png" width="100%"></center>
+    <br>
+     <ion-list>
+        <div ng-repeat="group in eventos">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+           {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            Local: {{item.local}}<Br>
+            Endereço: {{item.endereco}}<br>
+          </ion-item>
+        </div>
+      </ion-list>
+
+
+    
+<br><br>
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+  </ion-content>
+</ion-view>

@@ -64,6 +64,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+
+
  
 
 
@@ -77,11 +79,56 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+      url: '/chats/fisicas',
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
           controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+     .state('tab.unidades-moveis', {
+      url: '/chats/moveis',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/unidades-moveis.html',
+          controller: 'UnidadesMoveis'
+        }
+      }
+    })
+     .state('tab.unidades-moveis-servicos', {
+      url: '/chats/moveis/servicos',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/unidades-moveis-servicos.html',
+          controller: 'UnidadesMoveis'
+        }
+      }
+    })
+  .state('tab.unidades-moveis-localizar', {
+      url: '/chats/moveis/localizar',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/unidades-moveis-localizar.html',
+          controller: 'UnidadesMoveis'
+        }
+      }
+    })
+  .state('tab.unidades-moveis-programacao', {
+      url: '/chats/moveis/programacao',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/unidades-moveis-programacao.html',
+          controller: 'UnidadesMoveis'
+        }
+      }
+    })
+  .state('tab.unidades-moveis-eventos', {
+      url: '/chats/moveis/eventos',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/unidades-moveis-eventos.html',
+          controller: 'UnidadesMoveis'
         }
       }
     })
