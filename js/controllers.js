@@ -9,6 +9,9 @@ angular.module('starter.controllers', ['ionic'])
  })
 
 .controller('ChatsCtrl', function($scope, $http) {
+ $scope.GotoLink = function (url) {
+          window.open(url,'_blank', "location=1,status=1,scrollbars=1");
+        }
 
    
 })
