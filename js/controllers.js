@@ -1,8 +1,7 @@
 angular.module('starter.controllers', ['ionic'])
  
-.controller('DashCtrl', ['$http', '$scope', function($http, $scope) { 
-	     
-       
+.controller('DashCtrl', ['$http', '$scope', '$rootScope', '$state', function($http, $scope, $rootScope, $state) { 
+	      
 }])
 
 .controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicModal) {
@@ -502,7 +501,7 @@ $scope.unidades = [
    
 })
 
-.controller('TrabalhadorVagas', function($scope, $http) {
+.controller('TrabalhadorVagas', function($scope, $http, $ionicLoading, $stateParams, $ionicPopup) {
      $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
@@ -513,12 +512,25 @@ $scope.unidades = [
   $scope.isGroupShown = function(group) {
     return $scope.shownGroup === group;
   };  
-
-  
-  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/vagas')
+    $ionicLoading.show({
+    content: 'Carregando Vagas',
+    animation: 'fade-in',
+    showBackdrop: true,
+    maxWidth: 200,
+    showDelay: 0
+  });
+  $scope.iconetopo =  $stateParams.tipoVaga;
+  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/vagas', {params: {tipo: $stateParams.tipoVaga}})
                .success(function(data) {
-                    $scope.loading = false;
+                      $ionicLoading.hide(); 
                 }) 
+               .error(function(data) {
+                $ionicLoading.hide();
+                  return $ionicPopup.alert({
+                       title: 'ATENÇÃO.',
+                       template: 'Seu dispositivo não esta conectado na internet.'
+                     });
+               })
                .then(        
                 function(res){ 
                   $scope.vagas  = res.data;              

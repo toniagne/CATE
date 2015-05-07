@@ -74,6 +74,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+
+ //---------------------------------------------------------------VAGAS
  .state('tab.trabalhador-oportunidades', {
       url: '/trabalhador/oportunidades',
       views: {
@@ -93,6 +95,80 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+//---------------------------------------------------------------qualificacao / PRONATEC
+ .state('tab.trabalhador-qualificacao', {
+      url: '/trabalhador/qualificacao',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-qualificacao.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+ .state('tab.trabalhador-pronatec', {
+      url: '/trabalhador/pronatec',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-pronatec.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+ //---------------------------------------------------------------SEGURO
+ .state('tab.trabalhador-seguro', {
+      url: '/trabalhador/seguro',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-seguro.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+  //---------------------------------------------------------------ORIENTAÇÃO
+ .state('tab.trabalhador-orientacao', {
+      url: '/trabalhador/orientacao',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-orientacao.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+   //---------------------------------------------------------------PACET
+ .state('tab.trabalhador-pacet', {
+      url: '/trabalhador/pacet',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-pacet.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+    //---------------------------------------------------------------CARTEIRA DE TRABALHO
+ .state('tab.trabalhador-carteira', {
+      url: '/trabalhador/carteira',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-carteira.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+     //---------------------------------------------------------------PREVIDENCIA
+ .state('tab.trabalhador-previdencia', {
+      url: '/trabalhador/previdencia',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-previdencia.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
 
   .state('tab.chats', {
       url: '/chats',
