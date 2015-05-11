@@ -64,12 +64,105 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+ .state('tab.autonomo', {
+      url: '/autonomo',
+      views: {
+        'tab-autonomo': {
+          templateUrl: 'templates/autonomo.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+  .state('tab.autonomo-empreendedor', {
+      url: '/autonomo/empreendedor',
+      views: {
+        'tab-autonomo': {
+          templateUrl: 'templates/autonomo-empreendedor.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+    .state('tab.autonomo-ade', {
+      url: '/autonomo/ade',
+      views: {
+        'tab-autonomo': {
+          templateUrl: 'templates/autonomo-ade.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
 
  .state('tab.trabalhador', {
       url: '/trabalhador',
       views: {
         'tab-trabalhador': {
           templateUrl: 'templates/trabalhadores.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+  .state('tab.empresa', {
+      url: '/empresa',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+   //---------------------------------------------------------------VAGAS
+ .state('tab.empresa-vagas', {
+      url: '/empresa/vagas',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-vagas.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+  .state('tab.empresa-requerimento', {
+      url: '/empresa/requerimento',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-requerimento.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+   .state('tab.empresa-curriculum', {
+      url: '/empresa/curriculum',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-curriculum.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+    .state('tab.empresa-caged', {
+      url: '/empresa/caged',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-caged.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+     .state('tab.empresa-demanda', {
+      url: '/empresa/demanda',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-demanda.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+      .state('tab.empresa-cbo', {
+      url: '/empresa/cbo',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-cbo.html',
           controller: 'ChatsCtrl'
         }
       }
