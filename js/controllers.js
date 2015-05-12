@@ -24,7 +24,7 @@ angular.module('starter.controllers', ['ionic'])
       name: 'ARICANDUVA',
       items: [{
       	endereco: 'Rua Atucuri, 699 , Aricanduva, CEP 03411-000',
-      	servicos: 'Intermediação de Mão de Obra, Emissão de Carteira de Trabalho, Habilitação de Seguro Desemprego, Curso de Qualificação Profissional e Social, PACET, MEI',
+      	servicos: 'Intermediação de Mão de Obra, Emissão de Carteira de Trabalho, Habilitação de Seguro <Br>Desemprego, Curso de Qualificação Profissional e Social, PACET, MEI',
       	horarios: 'das 8h00 às 17h00 de segunda a sexta.'
       }]
     },
