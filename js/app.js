@@ -304,7 +304,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-chats': {
           templateUrl: 'templates/unidades-moveis-localizar.html',
-          controller: 'UnidadesMoveis'
+          controller: 'lerUnidadesMoveis'
         }
       }
     })
@@ -313,7 +313,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-chats': {
           templateUrl: 'templates/unidades-moveis-programacao.html',
-          controller: 'UnidadesMoveis'
+          controller: 'UnidadesMoveisProgramacao'
         }
       }
     })
@@ -322,7 +322,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-chats': {
           templateUrl: 'templates/unidades-moveis-eventos.html',
-          controller: 'UnidadesMoveis'
+          controller: 'UnidadesMoveisEventos'
         }
       }
     })

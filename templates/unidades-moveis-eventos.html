@@ -7,7 +7,7 @@
      &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="55%"> 
     </center>
     <br>
-     <ion-list>
+<ion-list>
         <div ng-repeat="group in eventos">
           <ion-item class="item-stable"
                     ng-click="toggleGroup(group)"
@@ -17,10 +17,9 @@
            {{group.name}}
           </ion-item>
           <ion-item class="item-accordion"
-                    ng-repeat="item in group.items"
+                    ng-repeat="item in group.itens"
                     ng-show="isGroupShown(group)">
-            Local: {{item.local}}<Br>
-            Endereço: {{item.endereco}}<br>
+                    {{item}}
           </ion-item>
         </div>
       </ion-list>
