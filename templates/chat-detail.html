@@ -13,7 +13,7 @@
       * Intermediação para o trabalho<br>
       * Cursos de Qualificação Profissional – PRONATEC – Programa Nacional de Acesso ao Ensino Técnico e Emprego.<br>  "Orientação para o Trabalho Seleção".<br>
       * Processo de Seleção<br>
-      * <font color="red">Atendimento às pessoas com deficiência (PCD) “Luciana”</font><br>
+      * <font color="red">Atendimento às pessoas com deficiência (PCD)</font><br>
       * Habilitação ao Seguro-Desemprego<br>
       * Emissão de Carteira de Trabalho e Previdência Social (CTPS)<br>
       * PACET - Consulta junto ao Sistema de Proteção ao Crédito – SPC e conciliação entre o devedor e o credor. <br>
@@ -35,7 +35,7 @@
 
   <ion-list>
         <div ng-repeat="group in unidades">
-          <ion-item class="item-stable"
+          <ion-item class="item-stable" nav-clear
                     ng-click="toggleGroup(group)"
                     ng-class="{active: isGroupShown(group)}">
               <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
@@ -45,7 +45,7 @@
           <ion-item class="item-accordion"
                     ng-repeat="item in group.itens"
                     ng-show="isGroupShown(group)">
-                    {{item}}
+                    <div class="item item-text-wrap"style="background-color: #C1FFC1;"> {{item}} </div>
           </ion-item>
         </div>
       </ion-list>
