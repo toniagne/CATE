@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.neolig.CAT" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.neolig.CAT" version="1.0.91" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>CAT</name>
     <description>
        Serviço de Intermediação para o Trabalho do CAT, serviços gratuítos do Trabalho:
@@ -31,6 +31,7 @@
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="InAppBrowser" value="org.apache.cordova.core.InAppBrowser" />
 
     <icon src="res/icon/android/icon-36-ldpi.png" />
 
