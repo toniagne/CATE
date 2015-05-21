@@ -30,8 +30,7 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="InAppBrowser" value="org.apache.cordova.core.InAppBrowser" />
+    <gap:plugin name="org.apache.cordova.splashscreen" /> 
 
     <icon src="res/icon/android/icon-36-ldpi.png" />
 
