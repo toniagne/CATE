@@ -1,19 +1,19 @@
 angular.module('starter.controllers', ['ionic'])
  
-.controller('DashCtrl', ['$http', '$scope', '$rootScope', '$state', function($http, $scope, $rootScope, $state) { 
-	      
+.controller('DashCtrl', ['$http', '$scope', '$rootScope', '$state', function($http, $scope, $rootScope, $state) { 	     
+        $rootScope.GotoLink = function (url) {
+          window.open(url,'_blank', "location=1,status=1,scrollbars=1");
+        }
 }])
 
 .controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicModal) {
     
  })
 
-.controller('ChatsCtrl', function($scope, $http) {
- $scope.GotoLink = function (url) {
+.controller('ChatsCtrl', function($scope, $http, $rootScope) {
+ $rootScope.GotoLink = function (url) {
           window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
-
-   
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats, $ionicLoading, $ionicPopup, $http) {
