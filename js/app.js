@@ -187,6 +187,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+   .state('tab.trabalhador-login', {
+      url: '/trabalhador/login',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-login-mte.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+     .state('tab.trabalhador-cadastro', {
+      url: '/trabalhador/cadastro',
+      views: {
+        'tab-trabalhador': {
+          templateUrl: 'templates/trabalhadores-cadastro-mte.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
 
 //---------------------------------------------------------------qualificacao / PRONATEC
  .state('tab.trabalhador-qualificacao', {
