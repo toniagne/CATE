@@ -30,3 +30,7 @@
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
 }
+  .iframe-issue {
+    -webkit-overflow-scrolling: touch !important;
+    overflow: scroll !important;
+  }
