@@ -176,7 +176,11 @@ angular.module('starter.controllers', ['ionic'])
    
 })
 
-.controller('TrabalhadorVagas', function($scope, $http, $ionicLoading, $stateParams, $ionicPopup) {
+.controller('TrabalhadorVagas', function($scope, $rootScope, $http, $ionicLoading, $stateParams, $ionicPopup) {
+   $rootScope.GotoLink = function (url) {
+          window.open(url,'_blank', "location=1,status=1,scrollbars=1");
+        }
+
      $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
