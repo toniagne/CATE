@@ -167,6 +167,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+.state('tab.empresa-vagas-login', {
+      url: '/empresa/vagaslogin',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-vagas-login.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+.state('tab.empresa-vagas-cadastro', {
+      url: '/empresa/vagascadastro',
+      views: {
+        'tab-empresa': {
+          templateUrl: 'templates/empresa-vagas-cadastro.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+
 
  //---------------------------------------------------------------VAGAS
  .state('tab.trabalhador-oportunidades', {
