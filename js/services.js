@@ -7,7 +7,7 @@ angular.module('starter.services', [])
 
  var chats = [{}];
 
-  
+ 
 
    
   return {
@@ -16,6 +16,10 @@ angular.module('starter.services', [])
     },
     remove: function(chat) {
       chats.splice(chats.indexOf(chat), 1);
+    },
+    banners: function(cidade){
+      var banners =  $http.get('http://www.ddd37.com.br/app/listagens/banners', {params: {cidade: cidade}});
+      console.log(banners);
     },
     get: function(chatId) {
       console.log(chatId);
