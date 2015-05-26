@@ -10,7 +10,10 @@ angular.module('starter.controllers', ['ionic'])
     
  })
 
-.controller('ChatsCtrl', function($scope, $http, $rootScope) {
+.controller('ChatsCtrl', function($scope, $http, $rootScope, $sce) {
+
+  $scope.login= $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
+
  $rootScope.GotoLink = function (url) {
           window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
