@@ -12,6 +12,10 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('ChatsCtrl', function($scope, $http, $rootScope, $sce) {
 
+   $scope.open = function(myUrl){
+        $window.location.href = $sce.trustAsResourceUrl(myUrl);
+    }
+
   $scope.login            = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
   $scope.cadastro         = $sce.trustAsResourceUrl("http://www.renies.com.br/neolig/cadastro.html");
 
