@@ -12,7 +12,14 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('ChatsCtrl', function($scope, $http, $rootScope, $sce) {
 
-  $scope.login= $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
+  $scope.login      = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
+  $scope.cadastro   = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/paginas/e-empregador/precadastro.xhtml");
+
+  $scope.disvagas   = $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/index.xhtml");
+  $scope.discadastro= $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml");
+  
+
+  
 
  $rootScope.GotoLink = function (url) {
           window.open(url,'_blank', "location=1,status=1,scrollbars=1");
