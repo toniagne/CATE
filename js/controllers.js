@@ -12,12 +12,14 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('ChatsCtrl', function($scope, $http, $rootScope, $sce) {
 
-  $scope.login      = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
-  $scope.cadastro   = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/paginas/e-empregador/precadastro.xhtml");
+  $scope.login            = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
+  $scope.cadastro         = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/paginas/e-empregador/precadastro.xhtml");
 
-  $scope.disvagas   = $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/index.xhtml");
-  $scope.discadastro= $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml");
-  
+  $scope.disvagas         = $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/index.xhtml");
+  $scope.discadastro      = $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml");
+  $scope.empresacurriculum= $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/portal/pages/home.xhtml");
+  $scope.caged            = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/portalcaged/paginas/home/home.xhtml");
+  $scope.demanda          = $sce.trustAsResourceUrl("http://www.mtecbo.gov.br/cbosite/pages/home.jsf");
 
   
 
