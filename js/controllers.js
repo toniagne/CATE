@@ -10,11 +10,11 @@ angular.module('starter.controllers', ['ionic'])
     
  })
 
-.controller('ChatsCtrl', function($scope, $http, $rootScope, $sce) {
+.controller('ChatsCtrl', function($scope, $http, $rootScope, $sce, $window) {
 
-   $scope.open = function(myUrl){
-        $window.location.href = $sce.trustAsResourceUrl(myUrl);
-    }
+$scope.linkModelFunc = function (url){ 
+  $window.open(url);
+}
 
   $scope.login            = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
   $scope.cadastro         = $sce.trustAsResourceUrl("http://www.renies.com.br/neolig/cadastro.html");
