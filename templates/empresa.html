@@ -4,11 +4,11 @@
     <center><img src="img/topo_empresa.png" width="100%"></center>
     <br>
      <center>
-	   <a href="#/tab/empresa/vagas"><img src="img/botaoEmpresaVagas.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	   <a href="#/tab/empresa/requerimento"><img src="img/botaoEmpresaRequerimento.png" width="35%"></a><br>
+	   <a ng-href="https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml"><img src="img/botaoEmpresaVagas.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <a  ng-href="{{ trustUrl('https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml') }}"><img src="img/botaoEmpresaRequerimento.png" width="35%"></a><br>
 	   <br>
-	   <a href="#/tab/empresa/curriculum"><img src="img/botaoEmpresaCurriculum.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	   <a  href="#/tab/empresa/caged"><img src="img/botaoEmpresaCaged.png" width="35%"></a><br>
+	   <a ng-click="GotoLink('https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml')"><img src="img/botaoEmpresaCurriculum.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <a  href="https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;"><img src="img/botaoEmpresaCaged.png" width="35%"></a><br>
 	   <br>
 	   <a href="#/tab/empresa/demanda"><img src="img/botaoEmpresaDemanda.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	   <a href="#/tab/empresa/demanda"><img src="img/botaoEmpresaCbo.png" width="35%"></a><br>

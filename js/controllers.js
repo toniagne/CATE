@@ -11,6 +11,14 @@ angular.module('starter.controllers', ['ionic'])
  })
 
 .controller('ChatsCtrl', function($scope, $http, $rootScope, $sce, $window) {
+$scope.GotoLink = function (url) {
+          $window.open('http://'+url,'_blank', "location=1,status=1,scrollbars=1");
+}
+
+
+$scope.trustUrl = function(url) {
+    return $sce.trustAsResourceUrl(url);
+}
 
 $scope.linkModelFunc = function (url){ 
   $window.open(url);
