@@ -34,6 +34,7 @@ $scope.linkModelFunc = function (url){
   
 
  $rootScope.GotoLink = function (url) {  
+
           $window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
 })
