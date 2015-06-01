@@ -13,13 +13,11 @@ angular.module('starter.controllers', ['ionic'])
 .controller('ChatsCtrl', function($scope, $http, $rootScope, $sce, $window) {
  
 
-$scope.trustUrl = function(url) {
-  $http.defaults.headers.common['Authorization']='undefind'; 
-   $sce.trustAsResourceUrl(url);
+$scope.trustUrl = function(url) { 
+  return $sce.trustAsResourceUrl(url);
 }
 
-$scope.linkModelFunc = function (url){   
-  $http.defaults.headers.common['Authorization']='undefind'; 
+$scope.linkModelFunc = function (url){    
   var linkok = $sce.trustAsResourceUrl(url);
   $window.open(linkok,'_system', "location=1,status=1,scrollbars=1");
 }
@@ -35,8 +33,7 @@ $scope.linkModelFunc = function (url){
 
   
 
- $rootScope.GotoLink = function (url) { 
-          $http.defaults.headers.common['Authorization']='undefind'; 
+ $rootScope.GotoLink = function (url) {  
           $window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
 })
