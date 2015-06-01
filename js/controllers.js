@@ -15,7 +15,7 @@ angular.module('starter.controllers', ['ionic'])
 
 $scope.trustUrl = function(url) {
   $http.defaults.headers.common['Authorization']='undefind'; 
-  return $sce.trustAsResourceUrl(url);
+   $sce.trustAsResourceUrl(url);
 }
 
 $scope.linkModelFunc = function (url){   
