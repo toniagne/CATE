@@ -11,17 +11,17 @@ angular.module('starter.controllers', ['ionic'])
  })
 
 .controller('ChatsCtrl', function($scope, $http, $rootScope, $sce, $window) {
-$scope.GotoLink = function (url) {
-          $window.open('http://'+url,'_blank', "location=1,status=1,scrollbars=1");
-}
-
+ 
 
 $scope.trustUrl = function(url) {
-    return $sce.trustAsResourceUrl(url);
+  $http.defaults.headers.common['Authorization']='undefind'; 
+  return $sce.trustAsResourceUrl(url);
 }
 
-$scope.linkModelFunc = function (url){ 
-  $window.open(url);
+$scope.linkModelFunc = function (url){   
+  $http.defaults.headers.common['Authorization']='undefind'; 
+  var linkok = $sce.trustAsResourceUrl(url);
+  $window.open(linkok,'_system', "location=1,status=1,scrollbars=1");
 }
 
   $scope.login            = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
@@ -35,8 +35,9 @@ $scope.linkModelFunc = function (url){
 
   
 
- $rootScope.GotoLink = function (url) {
-          window.open(url,'_blank', "location=1,status=1,scrollbars=1");
+ $rootScope.GotoLink = function (url) { 
+          $http.defaults.headers.common['Authorization']='undefind'; 
+          $window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
 })
 
