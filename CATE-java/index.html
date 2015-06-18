@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html  ng-app="CATe">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multi-page template</title>
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/angular/angular.min.js" ></script> 
+    <script src="js/controllers.js"></script> 
+
+</head>
+<style>
+body { background-image: url("img/fundo.jpg"); text-align:center; background-size: 100% 100%;}
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+
+</style>
+<body  ng-controller="Funcoes">
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+	<div role="main" class="ui-content" >
+		  <img src="img/logoinicial.png" width="80%">
+    <br>
+   <img src="img/menuprincipal.png" width="100%" ismap usemap="#exemplo1"><br>
+    <map name="exemplo1"> 
+	    <area coords="2,140,250,30" href="#unidades" shape="rect">
+	    <area coords="10,300,130,145" href="#trabalhador" shape="rect">
+	    <area coords="150,40,450,200" href="#empresa" shape="rect" >
+	    <area coords="150,170,320,375" href="#autonomo" shape="rect">
+	</map> 
+    <br>
+    <img src="img/assinatura.png" width="100%"><br> 
+	</div><!-- /content --> 
+</div><!-- /page one -->
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="empresa">
+	<div role="main" class="ui-content" >
+	 <center><img src="img/topo_empresa.png" width="100%"></center>
+    <br> 
+     <center>    
+	   <a href="https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml" target="_blank" rel="external", data-ajax="false"><img src="img/botaoEmpresaVagas.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	   <a href="http://granulito.mte.gov.br/sdweb/empregadorweb/index.jsf" target="_blank" rel="external", data-ajax="false"><img src="img/botaoEmpresaRequerimento.png" width="35%"></a><br>
+
+	   <br>
+	   <a href="https://maisemprego.mte.gov.br/portal/pages/home.xhtml"><img src="img/botaoEmpresaCurriculum.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	   <a onclick="window.open('https://granulito.mte.gov.br/portalcaged/paginas/home/home.xhtml', '_system', 'location=yes')"><img src="img/botaoEmpresaCaged.png" width="35%"></a><br>
+
+	   <br>
+	   <a  onclick="window.open('https://maisemprego.mte.gov.br/portal/pages/home.xhtml', '_blank', 'location=yes')"><img src="img/botaoEmpresaDemanda.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <a onclick="window.open('http://www.mtecbo.gov.br/cbosite/pages/home.jsf', '_blank', 'location=yes')"><img src="img/botaoEmpresaCbo.png" width="35%"></a><br>
+	   <br>
+
+   </center>
+</div>
+</div><!-- /page two -->
+ 
+<!-- Start of second page: #unidades -->
+<div data-role="page" id="unidades">
+	<div role="main" class="ui-content" >
+		<img src="img/logo.png" width="100%">
+		<br><br>
+		<a href="#unidadesfisicas" ng-click="unidades()">
+		    <img src="img/botaoUnidades1.png" width="40%">
+		</a><br>
+		<br>
+		    <a href="#unidadesmoveis">
+		        <img src="img/botaoUnidades2.png" width="40%">
+		    </a><br>
+		<br><br>
+		    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="unidadesfisicas">
+	<div role="main" class="ui-content" >
+		   <center>
+      <br> 
+        &nbsp;&nbsp;<img src="img/botaoUnidades1.png" width="30%">
+     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+    </center>
+    <br>
+     <p align="left" class="fundoconteudo">
+      <b>No Serviço de Intermediação para o Trabalho do CATe</b>, você encontra, gratuitamente, os serviços:<br>
+      <br>
+      * Intermediação para o trabalho<br>
+      * Cursos de Qualificação Profissional – PRONATEC – Programa Nacional de Acesso ao Ensino Técnico e Emprego.<br>  "Orientação para o Trabalho Seleção".<br>
+      * Processo de Seleção<br>
+      * Atendimento às pessoas com deficiência (PCD)<br>
+      * Habilitação ao Seguro-Desemprego<br>
+      * Emissão de Carteira de Trabalho e Previdência Social (CTPS)<br>
+      * PACET - Consulta junto ao Sistema de Proteção ao Crédito – SPC e conciliação entre o devedor e o credor. <br>
+      * MEI – Formalização e orientação ao Micro Empreendedor Individual<br>
+      * Orientação trabalhista e previdenciária <br>
+    </p>
+     <br>
+     <p align="left" class="fundoconteudo">
+        <b>Você deve comparecer às unidades do CATe com os seguintes documentos:</b><br>
+        *  RG (Registro Geral)<br>
+        *  CPF<br>
+        *   PIS (Se houver)<br>
+        *  Carteira de Trabalho <br>
+        *  Comprovante de escolaridade<br>
+        *  Comprovante de residência<br>
+        *  Certificados de cursos (Se houver)<br>
+    </p>
+   <br>
+
+ <p  ng-repeat="group in unidades" > 	  
+					<a href="#popupDescricao" ng-click="detalhesvaga(group.itens)" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-mini ui-corner-all ui-btn-icon-left ui-icon-action" data-transition="fade">{{group.name}}</a>	 			 
+				</p>
+				<div data-role="popup" id="popupDescricao" data-theme="a"  data-corners="false">			      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Fechar</a>
+					      <h4>Descrição</h4>
+					    <div role="main" class="ui-content" style="text-align: left;">
+					ENDEREÇO<br>
+						         <b>{{itensvaga.endereco}}</b><br>
+								 <br>
+						      
+						SERVIÇOS<br>
+						         <b>{{itensvaga.servicos}}</b><br>
+								 <br>
+
+						         HORÁRIO<br>
+						         <b>{{itensvaga.horario}}</b><br>
+								 <br>
+ 				 
+					    </div> 
+				</div>
+
+ 
+
+ 
+  
+
+		<br><br>
+		    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="unidadesmoveis">
+	<div role="main" class="ui-content" >
+		<center>
+		      <br> 
+		        &nbsp;&nbsp;<img src="img/botaoUnidades2.png" width="30%">
+		     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+		    </center>
+		    <br>
+		     <p align="justify" class="fundoconteudo">
+		     As unidades do CATe Móvel são veículos utilitários equipados com toda infraestrutura para realização de atendimento e que levam aos locais mais distantes da capital alguns dos principais serviços dos postos fixos, visando aproximá-los da população mais carente, facilitando a vida dos cidadãos.<Br>
+		     <Br>
+		     A cada quinzena, as unidades móveis mudam de endereço e são deslocadas para novos pontos distribuídos pelas cinco regiões da cidade, além de participarem de eventos.<Br>
+		    </p><br>
+		   <center>
+		   <a href="#servicos"><img src="img/botaoUnidadesMoveisServicos.png" width="35%"></a>
+		    
+		 </center>
+
+		<br><br>
+		    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+<div data-role="page" id="servicos">
+	<div role="main" class="ui-content" >
+		    <center>
+			      <br> 
+			        &nbsp;&nbsp;<img src="img/botaoUnidades2.png" width="30%">
+			     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+			    </center>
+
+			    <br>
+			     <p align="justify" class="fundoconteudo">
+			       <img src="img/topo_servicos.png" width="80%"><Br>
+			       Intermediação de Mão de Obra, Emissão de Carteira de Trabalho, Habilitação de Seguro Desemprego, Curso de Qualificação Profissional e Social (PRONATEC) e Microempreendedorismo Individual (MEI)
+			    </p><br>
+
+			   <center>
+				   <a href="#programacao"><img src="img/botaoUnidadesMoveisProgramacao.png" width="35%" ng-click="programacao()"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				   <a href="#eventos"  ng-click="eventos()"><img src="img/botaoUnidadesMoveisEventos.png" width="35%"></a>
+			   </center>
+			<br><br>
+			    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+<div data-role="page" id="programacao">
+<div data-role="panel" id="programacaoPanel" class="main_nav" data-display="push"  data-dismissible="true" data-theme="b">
+        <div class="nav_profile">
+            <div class="nav_name">
+                 <h4>Descrição</h4>
+					    <div role="main" class="ui-content" style="text-align: left;">
+						 LOCAL<br>
+						         <b>{{itensvaga.local}}</b><br>
+								 <br>
+						      
+						         DESCRIÇÃO<br>
+						         <b>{{itensvaga.descricao}}</b><br>
+								 <br>
+ 		
+						<a href="#programacao" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Fechar</a>				 
+					    </div> 
+            </div><!--/nav_name-->
+        </div><!--/nav_profile-->
+    </div><!-- /panel -->
+	<div role="main" class="ui-content" >
+		     <center>
+			      <br> 
+			        &nbsp;&nbsp;<img src="img/botaoUnidades2.png" width="30%">
+			     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+			    </center>
+			    <br>
+
+ <p  ng-repeat="group in programacao" > 	  
+					<a href="#programacaoPanel" data-rel="panel" ng-click="detalhesvaga(group.itens)"   class="ui-btn ui-shadow ui-mini ui-corner-all ui-btn-icon-left ui-icon-action" data-transition="fade">{{group.name}}</a>	 			 
+				</p>
+				<div data-role="popup" id="popupDescricao" data-theme="a"  data-corners="false">			      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Fechar</a>
+					      <h4>Descrição</h4>
+					    <div role="main" class="ui-content" style="text-align: left;">
+
+					{{itensvaga}}
+					 
+					    </div> 
+				</div>
+
+ 
+
+			    
+			<br><br>
+			    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="eventos">
+<div data-role="panel" id="programacaoEventos" class="main_nav" data-display="push"  data-dismissible="true" data-theme="b">
+        <div class="nav_profile">
+            <div class="nav_name">
+                 <h4>Descrição</h4>
+					    <div role="main" class="ui-content" style="text-align: left;">
+				
+						LOCAL<br>
+						         <b>{{itensvaga.local}}</b><br>
+								 <br>
+						      
+						DECRIÇÃO<br>
+						         <b>{{itensvaga.descricao}}</b><br>
+								 <br>
+ 
+ 		
+						<a href="#eventos" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Fechar</a>				 
+					    </div> 
+            </div><!--/nav_name-->
+        </div><!--/nav_profile-->
+    </div><!-- /panel -->
+	<div role="main" class="ui-content" >
+		     <center>
+			      <br> 
+			        &nbsp;&nbsp;<img src="img/botaoUnidades2.png" width="30%">
+			     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+			    </center>
+			    <br>
+
+ <p  ng-repeat="group in eventos" > 	  
+					<a href="#programacaoEventos" data-rel="panel" ng-click="detalhesvaga(group.itens)" class="ui-btn ui-shadow ui-mini ui-corner-all ui-btn-icon-left ui-icon-action" data-transition="fade">{{group.name}}</a>	 			 
+				</p>
+				<div data-role="popup" id="popupDescricao" data-theme="a"  data-corners="false">			      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Fechar</a>
+					      <h4>Descrição</h4>
+					   
+				</div>
+
+			 	 
+
+			    
+			<br><br>
+			    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+
+<div data-role="page" id="trabalhador">
+	<div role="main" class="ui-content" >
+		     <center><img src="img/topo_trabalhadores.png" width="100%"></center>
+    <br>
+     <center>
+	   <a href="#oportunidades"><img src="img/botaoTrabalhadoresOportunidades.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <a href="#qualificacao"><img src="img/botaoTrabalhadoresQualificacao.png" width="35%"></a><br>
+	   <br>
+	   <a href="#seguro"><img src="img/botaoTrabalhadoresSeguro.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <a href="#orientacao"><img src="img/botaoTrabalhadoresOrientacao.png" width="35%"></a><br>
+	   <br>
+	   <a href="#pacet"><img src="img/botaoTrabalhadoresPacet.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   <a href="#carteira"><img src="img/botaoTrabalhadoresCarteiratrabalho.png" width="35%"></a><br>
+	   <br>
+	   <a href="#inss"><img src="img/botaoTrabalhadoresPrevidencia.png" width="35%"></a>
+
+   </center>
+
+    
+<br><br>
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="oportunidades">
+	<div role="main" class="ui-content" >
+		        <center><img src="img/topo_trabalhadores_oportunidades.png" width="100%"></center>
+				    <br>
+				    <p align="justify" class="fundoconteudo">
+				    
+				    Neste aplicativo, você pode realizar seu cadastro no Portal M.T.E Mais Emprego e consultar vagas disponíveis para o seu perfil profissional. É importante observar o perfil exigido para cada vaga. <Br>
+				    <Br>
+				    O candidato somente terá acesso à mesma se preencher todos os requisito solicitados pelo empregador.<Br>
+				    </p>  
+				    <center><Br>
+				    <Br>
+				    <a href="#vagas-diretas"  ng-click="vagasdiretas('diretas')"><img src="img/botao_pesquisa-diretas.png" width="85%"></a><br>
+				    <Br>
+				    <a href="#vagas-diretas" ng-click="vagasdiretas('temporarias')"><img src="img/botao_pesquisa-temporarias.png" width="85%"></a><Br>
+				    <br>
+				    <a href="#vagas-diretas" ng-click="vagasdiretas('deficientes')"><img src="img/botao_pesquisa-deficientes.png" width="85%"></a><Br>
+				<br><br>
+				    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+
+<div data-role="page" id="vagas-diretas">
+    <div data-role="panel" id="myPanel" class="main_nav" data-display="push"  data-dismissible="true" data-theme="b">
+        <div class="nav_profile">
+            <div class="nav_name">
+                 <h4>Descrição da Vaga</h4>
+					    <div role="main" class="ui-content" style="text-align: left;">
+					         DATA<br>
+						         <b>{{itensvaga.data}}</b><br>
+								 <br>
+						      
+						         DESCRIÇÃO<br>
+						         <b>{{itensvaga.descricao}}</b><br>
+								 <br>
+
+						         SALÁRIO<br>
+						         <b>{{itensvaga.salario}}</b><br>
+								 <br>
+
+						         ESCOLARIDADE<br>
+						         <b>{{itensvaga.escolaridade}}</b><br>
+								 <br>
+
+						         EXPERIÊNCIA</br>
+						         <b>{{itensvaga.experiencia}}</b><br>		
+						<a href="#vagas-diretas" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Fechar</a>				 
+					    </div> 
+            </div><!--/nav_name-->
+        </div><!--/nav_profile-->
+    </div><!-- /panel -->
+	<div role="main" class="ui-content" >
+		       <br>  
+			     &nbsp;&nbsp;<img src="img/botao_pesquisa-{{iconetopo}}.png" width="45%">
+			     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="45%"> 
+			     <Br>
+			    <br>
+			    <p align="justify" class="fundoconteudo">
+			    • Todas as vagas aqui apresentadas estão cadastradas no sistema M.T.E. Mais Emprego, onde existem outras ofertas. A disponibilidade de encaminhamento está condicionada até o preenchimento total das mesmas, limite de encaminhamento da vaga e entre outros critérios subjetivos.<Br>
+			    <Br>
+			    • DOCUMENTAÇÃO NECESSÁRIA: RG, CPF, Carteira de Trabalho, Comprovante de Escolaridade, Comprovante de Residência e Certificados de Cursos (Se houver).<Br>
+			    </p>
+
+			    <center><h3> VAGAS DISPONÍVEIS </h3>
+			        <font size="2" color="red">As Vagas abaixo poderão sofrer alterações até o final do dia.</font>
+			    </center><Br>
+
+			   
+			    <p  ng-repeat="group in vagasdiretas" > 	  
+					<a href="#myPanel" data-rel="panel" ng-click="detalhesvaga(group.itens)"   class="ui-btn ui-shadow ui-mini ui-corner-all ui-btn-icon-left ui-icon-action" data-transition="fade">{{group.strNome}}</a>	 			 
+				</p>
+				<div data-role="popup" id="popupDescricao" data-theme="a"  data-corners="false">			      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Fechar</a>
+					      <h4>Descrição da Vaga</h4>
+					    <div role="main" class="ui-content" style="text-align: left;">
+					         DATA<br>
+						         <b>{{itensvaga.data}}</b><br>
+								 <br>
+						      
+						         DESCRIÇÃO<br>
+						         <b>{{itensvaga.descricao}}</b><br>
+								 <br>
+
+						         SALÁRIO<br>
+						         <b>{{itensvaga.salario}}</b><br>
+								 <br>
+
+						         ESCOLARIDADE<br>
+						         <b>{{itensvaga.escolaridade}}</b><br>
+								 <br>
+
+						         EXPERIÊNCIA</br>
+						         <b>{{itensvaga.experiencia}}</b><br>						 
+					    </div> 
+				</div>
+			
+
+
+			      <br><Br>
+			     <div class="fundoconteudobranco">
+			      <center><b>Para participar de uma dessas vagas, faça Login ou Cadastro no MTE.</b></center><br>
+			      <center>
+			       <a  onclick="window.open('http://www.renies.com.br/neolig/paginasmte/login.html', '_blank', 'location=yes')" ><img src="img/botao_login_mte.png" width="80%"></a>
+			       <br>
+			       <a   onclick="window.open('http://www.renies.com.br/neolig/paginasmte/cadastrese.html', '_blank', 'location=yes')" ><img src="img/botao_site_mte.png" width="80%"></a> 
+			       </center>
+			    </div>
+			    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="qualificacao">
+	<div role="main" class="ui-content" >
+		         <center>
+      <br> 
+        &nbsp;&nbsp;<img src="img/botaoTrabalhadoresQualificacao.png" width="30%">
+     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+    </center>
+    <br>
+    <br>
+    <center>
+    <a href="#pronatec"><img src="img/botao_pronatec.png" width="70%"></a>
+    
+    <br><Br>
+      <a href="#unidadesfisicas" ng-click="unidades()"><img src="img/aviso_pronatec.png" width="100%"></a>
+    </center>
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="pronatec">
+	<div role="main" class="ui-content" >
+		 <center>
+      <br> 
+        &nbsp;&nbsp;<img src="img/botao_pronatec.png" width="30%">
+     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+    </center>
+    <br>
+    <br>
+   
+      <p align="justify" class="fundoconteudo">
+        O Programa Nacional de Acesso ao Ensino Técnico e Emprego (Pronatec) foi criado pelo Governo
+        Federal, em 2011, com o objetivo de ampliar a oferta de cursos de educação profissional e tecnológica.<br>
+        <br>
+      Objetivos:<br>
+      • expandir, interiorizar e democratizar a oferta de cursos de educação profissional técnica de nível médio e de cursos de formação inicial e continuada ou qualificação profissional presencial e a distância;<br>
+      • construir, reformar e ampliar as escolas que ofertam educação profissional e tecnológica nas redes estaduais;<br>
+      • aumentar as oportunidades educacionais aos trabalhadores por meio de cursos de formação inicial e continuada ou qualificação profissional;<br>
+      • aumentar a quantidade de recursos pedagógicos para apoiar a oferta de educação profissional e tecnológica;<br>
+      • melhorar  a qualidade do ensino médio.<br>
+      <br>
+      </p>
+     <center>
+    <a href="#unidadesfisicas" ng-click="unidades()"><img src="img/aviso_pronatec.png" width="100%"></a>
+    </center>
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="seguro">
+	<div role="main" class="ui-content" >
+		    <center>
+		      <br> 
+		        &nbsp;&nbsp;<img src="img/botaoTrabalhadoresSeguro.png" width="30%">
+		     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+		    </center>
+		    <br>
+		    <br>
+		      <div class="fundoconteudo">
+		      <p align="justify" >
+		        Seguro- Desemprego Formal : Foi instituído com a finalidade de prover assistência financeira temporária a trabalhadores desempregados sem justa causa, e auxiliá-lo na manutenção e na busca de emprego, provendo para tanto, ações integradas de orientação, recolocação e qualificação profissional. <br>
+		        <br>
+		        O trabalhador no período que estiver recebendo o seguro-desemprego, não pode receber outra remuneração oriunda de vínculo empregatício formal ou informal. v
+		        <br>
+		        O trabalhador deve solicitar o seguro-desemprego de 7 a 120 dias após sua demissão, nas unidades do CATe. Depois de habilitado, o trabalhador encontra no Portal M.T.E. Mais Emprego, todas as informações sobre o beneficio a receber.<br>
+		        <br>
+		        O numero de parcelas varia de 03 a 05, chegando a 07 em casos especiais. Caso o trabalhador volte a se empregar, o benefício é suspenso.<br>
+
+		        <br>
+		      </p>
+		     <center>
+		    <a  onclick="window.open('http://granulito.mte.gov.br/sdweb/consulta.jsf', '_blank', 'location=yes')"><img src="img/botao_consulta_seguro.png" width="75%"></a>
+		    </center>
+  </div>
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="orientacao">
+	<div role="main" class="ui-content" >
+		     <center>
+		      <br> 
+		        &nbsp;&nbsp;<img src="img/botaoTrabalhadoresOrientacao.png" width="30%">
+		     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+		    </center>
+		    <br>
+		    <br>
+		   
+		      <p align="justify" class="fundoconteudo">
+		        <b>OFICINAS INTERATIVAS</b><br>
+		        <br>
+		        São palestras realizadas diariamente, e tem por objetivo dinamizar e orientar o trabalhador referente ao seu ingresso ou recolocação no mercado de trabalho. O tema proposto é escolhido de acordo com as necessidades e duvidas dos participantes, além de esclarecimentos sobre os serviços oferecidos pelo Centro de Apoio ao Trabalho.<br>
+		        <br>
+		        <b>OFICINAS TEMÁTICAS</b><br>
+		       <br>
+		        São oficinas realizadas as quartas-feiras com objetivo de preparar e desenvolver o trabalhador para o mercado de trabalho através de dicas de como elaborar seu currículo e a importância de mantê-lo atualizado, como se portar, qual o traje adequado para uma entrevista de emprego e as atividades propostas durante um processo de seleção como, por exemplo, dinâmicas de grupos. Aqueles que buscam o primeiro emprego, recolocação profissional ou abrir o seu próprio negócio também recebem dicas através de temas específicos:<br>
+		<br>
+		        <b>TEMAS</b><br>
+		<br>
+		        <b>Escolaridade e Qualificação</b><br>
+		<br>
+		        Os participantes são orientados sobre a importância do investimento em seus estudos e qualificação, tendo em vista o seu desenvolvimento para atuar no mercado de trabalho. 
+		          <br>
+		        <b>Elaboração de Currículo</b><br>
+		       <br>
+		        Esta oficina tem por objetivo, orientar o trabalhador em como confeccionar seu próprio currículo passo a passo, os participantes recebem dicas sobre o que colocar e o que não é necessário colocar no currículo, ressaltando a importância de tê-lo sempre atualizado, conhecer todo o seu conteúdo enfatizando que o currículo é o seu primeiro contato com a empresa.<br>
+
+		         <b>Conquistando o Primeiro Emprego</b><br>
+		<br>
+		        Os participantes são orientados a identificar o seu perfil profissional, traçar metas e objetivos, como elaborar o primeiro currículo, dicas de apresentação pessoal, como preencher fichas de emprego, meio de busca de vagas e como se portar em uma entrevista de emprego.</b><br>
+		       <br>
+		        <b>Processo Seletivo e Entrevista de Emprego</b><br>
+		       <br>
+		        Os participantes recebem dicas comportamentais durante um processo de seleção, elaboração de currículo, como identificar qualidades e pontos a melhorar, como elaborar redações, temas típicos de redação no processo seletivo e como se portar durante a realização de dinâmicas em grupo ou individuais.<br>
+		<br>
+		         <b>Habilidades</b><br>
+		<br>
+		        Os participantes são orientados em como identificar habilidades técnicas para realizar determinadas tarefas e importância de desenvolvê-las diariamente.<br>
+		       <br>
+		        <b>Marketing Pessoal</b><br>
+		       <br>
+		        Os participantes recebem dicas de apresentação pessoal durante um processo de seleção, tais como: vestimenta, higiene, comunicação e desenvolvimento de seu networking (rede de relacionamento) profissional e desenvolvimento de plano de carreira.<br>
+		<br>
+		        <b>Empregabilidade e Mercado de Trabalho</b><br>
+		       <br>
+		        Os participantes recebem dicas de como identificar e valorizar suas experiências profissionais e habilidades, ressaltando a importância de manter-se atualizado em relação ao ingresso no mercado de trabalho e assim planejar suas metas profissionais.<br>
+		<br>
+		        <b>Educação Financeira</b><br>
+		<br>
+		        Os participantes recebem dicas de como realizar um planejamento financeiro, consumir de forma moderada e planejamento de um orçamento equilibrado.<br>
+		<br>
+		        <b>Empreendedorismo</b><br>
+		       <br>
+		        Esta oficina tem por objetivo orientar o trabalhador sobre definição e características do empreendedor, divulgação dos serviços do MEI (o que é e quem pode participar), dicas de como empreender, traçar metas e formalizar seu próprio negócio.<br>
+		<br>
+
+		      </p> 
+		    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="pacet">
+	<div role="main" class="ui-content" >
+		    <center>
+			      <br> 
+			        &nbsp;&nbsp;<img src="img/botaoTrabalhadoresPacet.png" width="30%">
+			     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+			    </center>
+			    <br>
+			    <br>
+			   
+			      <p align="justify" class="fundoconteudo">
+			        PACET – Posto Avançado de Conciliação Extraprocessual do Trabalhador<br>        
+			        <br>
+			        É um programa de conciliação que auxilia o trabalhador com restrição cadastral “limpar o nome” da lista de inadimplentes, por meio de audiências de conciliações extraprocessuais com o credor e mediante a formalização de acordo entre as partes.<br>
+			        <br>
+			        Ao procurar o PACET, o trabalhador recebe o extrato com as informações sobre suas restrições. Caso haja interesse em negociar sua dívida é marcada uma audiência de conciliação no prazo de 15 a 20 dias.<br>
+			        <br>
+			        As consultas e os agendamentos são realizados em todas as unidades do CAT e as conciliações acontecem exclusivamente no - LUZ<br>
+			        <br>
+			        Importante: No momento da habilitação ao seguro-desemprego, você pode se inscrever em cursos do Pronatec (ver disponibilidade de cursos de programa na unidades do CAT SINE SP mais perto de você)
+			      <br>
+			      </p>
+			     <center>
+			       <a href="#unidadesfisicas" ng-click="unidades()"><img src="img/aviso_pacet.png" width="100%"></a>
+			    </center>
+			    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="carteira">
+	<div role="main" class="ui-content" >
+		     <center>
+		      <br> 
+		        &nbsp;&nbsp;<img src="img/botaoTrabalhadoresCarteiratrabalho.png" width="30%">
+		     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+		    </center>
+		    <br>
+		    <br>
+		   
+		      <p align="justify" class="fundoconteudo">            
+		      CTPS - Carteira de Trabalho e Previdência Social<br>
+		      <br>
+		       O trabalhador pode tirar sua CTPS nos postos do CATe.  . A carteira de trabalho é emitida para todos os solicitantes com idade igual ou superior a 14 anos. Quando tratar-se de extravio, furto, roubo ou perda deverá apresentar o Boletim de Ocorrência Policial, ou declaração de próprio punho, "sob as penas da lei“.<br>
+		       <br>
+		      Documentos necessários<br>
+		        <br>
+		    • RG (Registro Geral);<br>
+		    • 1 Foto 3x4, recente e com o fundo branco;<br>
+		    • Na ausência do RG, será aceito a Certidão de Nascimento, Certidão de Casamento ou qualquer outro documento oficial de identificação, desde que contenha todas as informações necessárias ao preenchimento dos dados do interessado no protocolo.<br>
+		      <br>
+		      </p>
+		     <center>
+		      <a href="#unidadesfisicas" ng-click="unidades()"><img src="img/aviso_carteira.png" width="100%"></a>
+		    </center>
+		    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="inss">
+	<div role="main" class="ui-content" >
+		    <center>
+      <br> 
+        &nbsp;&nbsp;<img src="img/botaoTrabalhadoresPrevidencia.png" width="30%">
+     &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logo.png" width="50%"> 
+    </center>
+    <br>
+    <br>
+   
+      <p align="justify" class="fundoconteudo">            
+        Orientação Trabalhista e Previdenciária <br>
+        <br>
+        O serviço de Orientação Trabalhista e Previdenciária, visa fornecer orientação jurídica quanto às leis trabalhistas nos Centros de Apoio ao Trabalho – CATe. A criação desse setor tem como objetivo levar informação, esclarecer dúvidas, do cidadão acerca dos direitos e deveres que rezam a legislação trabalhista e previdenciária, além de promover ações que estimulem a formalização. Essa atividade destina-se a todo público do, incluindo imigrantes e refugiados, e a sociedade em geral.<br>
+          <br>
+      </p>
+     <center>
+      <a href="#unidadesfisicas" ng-click="unidades()"><img src="img/aviso_previdencia.png" width="100%"></a>
+    </center>
+    <img src="img/logospatrocinadores.png" width="100%"><br> 
+	</div>
+</div><!-- /page two -->
+
+
+<div data-role="page" id="autonomo">
+	<div role="main" class="ui-content" >
+		    <center><img src="img/topo_autonomos.png" width="100%"></center>
+    <br><br><br>
+     <center>
+       <a href="#empreendedor"><img src="img/botao_autonomo_empreendedor.png" width="35%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="#ade"><img src="img/botao_autonomo_ade.png" width="35%"></a><br>
+     <br> 
+	   <br> 
+
+   </center>
+<br><br><br><br><br>
+    <br>
+<br><br>
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="empreendedor">
+	<div role="main" class="ui-content" >
+		    <center>
+    <center><img src="img/topo_autonomos.png" width="85%"></center>
+    </center>
+      <p align="justify" class="fundoconteudo"> 
+       MEI – Microempreendedor Individual<Br>
+       <Br>
+      Microempreendedor Individual (MEI) é a pessoa que trabalha por conta própria e que se legaliza como pequeno empresário. Para ser um microempreendedor individual, é necessário faturar no máximo até R$ 60.000,00 por ano e não ter participação em outra empresa como sócio ou titular. O MEI também pode ter um empregado contratado que receba o salário mínimo ou o piso da categoria.<Br>
+
+      <br>  
+      </p>
+      <center>
+       <a href="#unidadesfisicas" ng-click="unidades()"><img src="img/aviso_pacet.png" width="100%"></a>
+    </center>
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+<div data-role="page" id="ade">
+	<div role="main" class="ui-content" >
+		    <center>
+      <center><img src="img/topo_autonomos.png" width="85%"></center>
+    </center>
+      <p align="justify" class="fundoconteudo"> 
+       ADE SAMPA - Agência São Paulo de Desenvolvimento <br> 
+      <br> 
+      É um serviço social autônomo, dotado de personalidade de direito privado de fins não econômicos, de interesse coletivo e de utilidade pública. Tem por finalidade promover a execução de políticas de desenvolvimento local, especialmente as que contribuam para o crescimento econômico, a atração de investimentos, a redução das desigualdades regionais, a competitividade da economia, a geração de emprego e renda, o empreendedorismo, a economia solidária e a inovação tecnológica.<br> 
+
+
+      <br>  
+      </p> 
+    <img src="img/logospatrocinadores.png" width="100%"><br>
+	</div>
+</div><!-- /page two -->
+
+</body>
+</html>
