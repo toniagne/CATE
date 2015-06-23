@@ -20,13 +20,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
+ 
+.directive('browseTo', function ($ionicGesture) {
+ return {
+  restrict: 'A',
+  link: function ($scope, $element, $attrs) {
+   var handleTap = function (e) {
+    // todo: capture Google Analytics here
+    var inAppBrowser = window.open(encodeURI($attrs.browseTo), '_system');
+   };
+   var tapGesture = $ionicGesture.on('tap', handleTap, $element);
+   $scope.$on('$destroy', function () {
+    // Clean up - unbind drag gesture handler
+    $ionicGesture.off(tapGesture, 'tap', handleTap);
+   });
+  }
+ }
+})
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
+  $sceDelegateProvider.resourceUrlWhitelist(['self', new RegExp('^(http[s]?):\/\/(w{3}.)?youtube\.com/.+$')])
+
+
   $stateProvider
    .state('menu', {
       url: "/menu",
@@ -36,6 +56,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
   // setup an abstract state for the tabs directive
+
+
+
     .state('tab', {
     url: "/tab",
     abstract: true,

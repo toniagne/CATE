@@ -19,7 +19,7 @@ $scope.trustUrl = function(url) {
 
 $scope.linkModelFunc = function (url){    
   var linkok = $sce.trustAsResourceUrl(url);
-  return $window.open(linkok,'_system', "location=1,status=1,scrollbars=1");
+  //$window.open(linkok,'_system', "location=1,status=1,scrollbars=1");
 }
 
   $scope.login            = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
@@ -35,7 +35,7 @@ $scope.linkModelFunc = function (url){
 
  $rootScope.GotoLink = function (url) {  
 
-         return $window.open(url,'_blank', "location=1,status=1,scrollbars=1");
+          //$window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
 })
 
@@ -199,13 +199,29 @@ $scope.linkModelFunc = function (url){
    
 })
 
-.controller('TrabalhadorVagas', function($scope, $rootScope, $http, $ionicLoading, $stateParams, $ionicPopup) {
+.controller('TrabalhadorVagas', function($scope, $sce, $rootScope, $http, $ionicLoading, $stateParams, $ionicPopup, $ionicModal) {
+  
+   $ionicModal.fromTemplateUrl('templates/logintrabalhador.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+
+
+    $scope.showPopup = function(url) { 
+      $scope.endereco = $sce.trustAsResourceUrl(url);
+      $scope.modal.show();
+    }
+    
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    };
+
    $rootScope.GotoLink = function (url) {
           window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
-$scope.trustUrl = function(url) { 
-  return $sce.trustAsResourceUrl(url);
-}
+
      $scope.toggleGroup = function(group) {
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
