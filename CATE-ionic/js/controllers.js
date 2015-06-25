@@ -32,10 +32,8 @@ $scope.linkModelFunc = function (url){
   $scope.demanda          = $sce.trustAsResourceUrl("http://www.mtecbo.gov.br/cbosite/pages/home.jsf");
 
   
-
- $rootScope.GotoLink = function (url) {  
-
-          //$window.open(url,'_blank', "location=1,status=1,scrollbars=1");
+$scope.GotoLink = function (url) {  
+           return $window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
 })
 
@@ -218,8 +216,8 @@ $scope.linkModelFunc = function (url){
       $scope.modal.hide();
     };
 
-   $rootScope.GotoLink = function (url) {
-          window.open(url,'_blank', "location=1,status=1,scrollbars=1");
+$scope.GotoLink = function (url) {  
+           return $window.open(url,'_blank', "location=1,status=1,scrollbars=1");
         }
 
      $scope.toggleGroup = function(group) {
