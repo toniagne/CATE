@@ -1,5 +1,5 @@
 
-<ion-view view-title="" >
+<ion-view view-title="UNIDADES DO CATe" >
   <ion-content  style='background-image: url("img/fundo.jpg"); width:100%; height: 100%; background-size: 100% 100%;'>
      <center>
       <br> 
@@ -32,9 +32,14 @@
         *  Certificados de cursos (Se houver)<br>
     </p>
    <br>
-
+<div class="item-input-inset">   
+      <label class="item-input-wrapper" >
+        <input type="text" placeholder="PESQUISA UNIDADES" ng-model="expres" style="height: 50px; border: 4px;">
+      </label>       
+      
+    </div>
   <ion-list>
-        <div ng-repeat="group in unidades">
+        <div ng-repeat="group in unidades | filter:expres">
           <ion-item class="item-stable" nav-clear
                     ng-click="toggleGroup(group)"
                     ng-class="{active: isGroupShown(group)}">
