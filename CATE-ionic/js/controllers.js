@@ -23,7 +23,7 @@ $scope.linkModelFunc = function (url){
 }
 
   $scope.login            = $sce.trustAsResourceUrl("https://granulito.mte.gov.br/imoweb/");
-  $scope.cadastro         = $sce.trustAsResourceUrl("http://www.renies.com.br/neolig/cadastro.html");
+  $scope.cadastro         = $sce.trustAsResourceUrl("http://www.garagee.com.br/neolig/cadastro.html");
 
   $scope.disvagas         = $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/index.xhtml");
   $scope.discadastro      = $sce.trustAsResourceUrl("https://maisemprego.mte.gov.br/imoweb/paginas/e-trabalhador/precadastro.xhtml");
@@ -51,7 +51,7 @@ $scope.GotoLink = function (url) {
     showDelay: 0
   });
   $scope.iconetopo =  $stateParams.tipoVaga;
-  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/unidades')
+  $http.get('http://www.garagee.com.br/ddd37/gerenciador/cate/unidades')
                .success(function(data) {
                       $ionicLoading.hide(); 
                 }) 
@@ -89,7 +89,7 @@ $scope.GotoLink = function (url) {
     maxWidth: 200,
     showDelay: 0
   });
-  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/quinzenal')
+  $http.get('http://www.garagee.com.br/ddd37/gerenciador/cate/quinzenal')
                .success(function(data) {
                       $ionicLoading.hide(); 
                 }) 
@@ -125,7 +125,7 @@ $scope.GotoLink = function (url) {
     maxWidth: 200,
     showDelay: 0
   });
-  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/eventos')
+  $http.get('http://www.garagee.com.br/ddd37/gerenciador/cate/eventos')
                .success(function(data) {
                       $ionicLoading.hide(); 
                 }) 
@@ -161,7 +161,7 @@ $scope.GotoLink = function (url) {
     maxWidth: 200,
     showDelay: 0
   });
-  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/unidadesmoveis')
+  $http.get('http://www.garagee.com.br/ddd37/gerenciador/cate/unidadesmoveis')
                .success(function(data) {
                       $ionicLoading.hide(); 
                 }) 
@@ -238,7 +238,7 @@ $scope.GotoLink = function (url) {
     showDelay: 0
   });
   $scope.iconetopo =  $stateParams.tipoVaga;
-  $http.get('http://www.renies.com.br/ddd37/gerenciador/cate/vagas', {params: {tipo: $stateParams.tipoVaga}})
+  $http.get('http://www.garagee.com.br/ddd37/gerenciador/cate/vagas', {params: {tipo: $stateParams.tipoVaga}})
                .success(function(data) {
                       $ionicLoading.hide(); 
                 }) 
